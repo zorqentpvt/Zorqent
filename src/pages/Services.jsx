@@ -4,260 +4,256 @@ export default function Services() {
   const services = [
     {
       icon: "🌐",
-      title: "Full Stack Web Development",
-      subtitle: "SEO Optimized & Scalable",
-      description: "We build lightning-fast, responsive websites and web applications using modern frameworks like React, Next.js, and Node.js. Every project is optimized for search engines and designed to scale with your business.",
+      title: "Web Application Development",
+      subtitle: "Scalable & Maintainable",
+      description:
+        "We build structured, high-performance web applications using modern frameworks and clean architecture principles.",
       features: [
-        "Custom website development",
-        "E-commerce solutions",
-        "Progressive Web Apps (PWA)",
-        "API development & integration",
+        "Custom web platforms",
+        "REST API development",
+        "Authentication & role systems",
+        "Admin dashboards",
+        "Database design",
         "Performance optimization",
-        "SEO best practices"
       ],
-      technologies: ["React", "Next.js", "Node.js", "MongoDB", "PostgreSQL"],
-      color: "from-blue-600 to-cyan-600"
+      technologies: ["React", "Node.js", "Django", "PostgreSQL", "MongoDB"],
     },
     {
       icon: "📱",
       title: "Mobile App Development",
-      subtitle: "iOS & Android",
-      description: "Create stunning, high-performance mobile applications that users love. We develop cross-platform apps using Flutter and native apps for iOS and Android, ensuring smooth performance and beautiful user experiences.",
+      subtitle: "Android & iOS",
+      description:
+        "Cross-platform mobile applications built with performance, scalability, and long-term maintainability in mind.",
       features: [
-        "Cross-platform development",
-        "Native iOS & Android apps",
-        "App Store optimization",
+        "Cross-platform apps",
+        "API integration",
+        "Authentication systems",
         "Push notifications",
-        "Offline functionality",
-        "In-app payments integration"
+        "Offline capabilities",
+        "App deployment support",
       ],
-      technologies: ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
-      color: "from-purple-600 to-pink-600"
+      technologies: ["React Native", "Node.js", "Django", "MySQL"],
     },
     {
       icon: "🎮",
       title: "Game Development",
-      subtitle: "2D & 3D Games",
-      description: "Bring your game ideas to life with engaging, immersive gaming experiences. From casual mobile games to complex multiplayer games, we handle everything from concept to deployment.",
+      subtitle: "Interactive Experiences",
+      description:
+        "Development of engaging 2D and 3D games with optimized performance and scalable architecture.",
       features: [
-        "2D & 3D game development",
-        "Mobile & PC games",
-        "Multiplayer functionality",
-        "In-game monetization",
+        "2D & 3D games",
+        "Mobile & PC deployment",
         "Game optimization",
-        "Cross-platform deployment"
+        "Backend integration",
+        "Multiplayer systems",
+        "Performance tuning",
       ],
-      technologies: ["Unity", "Unreal Engine", "C#", "C++", "Blender"],
-      color: "from-red-600 to-orange-600"
+      technologies: ["Unity", "C#", "Node.js"],
     },
     {
-      icon: "🎨",
-      title: "UI/UX Design",
-      subtitle: "Beautiful & Intuitive",
-      description: "Design is at the heart of every great digital product. We create user-centered designs that are not only visually stunning but also intuitive and accessible, ensuring the best user experience.",
+      icon: "⚙️",
+      title: "Backend & API Engineering",
+      subtitle: "Reliable & Secure",
+      description:
+        "Robust backend systems designed for scalability, security, and long-term growth.",
       features: [
-        "User research & personas",
-        "Wireframing & prototyping",
-        "Visual design",
-        "Interaction design",
-        "Usability testing",
-        "Design systems"
+        "RESTful APIs",
+        "Authentication & authorization",
+        "Database architecture",
+        "Microservices support",
+        "Server optimization",
+        "System integration",
       ],
-      technologies: ["Figma", "Adobe XD", "Sketch", "Illustrator", "Photoshop"],
-      color: "from-green-600 to-teal-600"
+      technologies: ["Node.js", "Django", "Go", "PostgreSQL", "MySQL"],
     },
     {
-      icon: "☁️",
-      title: "Cloud Solutions",
-      subtitle: "Scalable & Secure",
-      description: "Leverage the power of cloud computing to build scalable, reliable, and secure applications. We provide cloud infrastructure setup, migration services, and ongoing management.",
+      icon: "🗄️",
+      title: "Database Architecture",
+      subtitle: "Optimized & Structured",
+      description:
+        "Efficient database design for high performance, reliability, and clean data management.",
       features: [
-        "Cloud infrastructure setup",
-        "AWS & Google Cloud services",
-        "Database management",
-        "CI/CD pipeline setup",
-        "Server monitoring",
-        "Security implementation"
+        "Relational database design",
+        "NoSQL implementation",
+        "Query optimization",
+        "Data migration",
+        "Backup strategies",
+        "Scaling strategies",
       ],
-      technologies: ["AWS", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
-      color: "from-indigo-600 to-purple-600"
+      technologies: ["PostgreSQL", "MySQL", "MongoDB"],
     },
     {
       icon: "🔧",
-      title: "Custom Development",
-      subtitle: "Tailored Solutions",
-      description: "Have a unique requirement? We specialize in building custom solutions tailored to your specific needs. From automation tools to complex enterprise systems, we've got you covered.",
+      title: "Custom Software Solutions",
+      subtitle: "Tailored Systems",
+      description:
+        "Custom-built digital systems designed around your operational and business requirements.",
       features: [
-        "Custom software development",
-        "Business automation",
-        "Third-party integrations",
-        "Legacy system modernization",
-        "Consultation & planning",
-        "Technical support"
+        "Business automation tools",
+        "Internal management systems",
+        "Custom dashboards",
+        "Legacy modernization",
+        "System refactoring",
+        "Technical consulting",
       ],
-      technologies: ["Python", "Java", "PHP", "Ruby", "Go"],
-      color: "from-yellow-600 to-red-600"
-    }
+      technologies: ["React", "Node.js", "Django", "Go"],
+    },
   ];
 
   const process = [
     {
       step: "01",
-      title: "Discovery",
-      description: "We start by understanding your business goals, target audience, and project requirements through detailed discussions."
+      title: "Requirement Analysis",
+      description:
+        "Understanding your business objectives, technical needs, and user expectations.",
     },
     {
       step: "02",
-      title: "Planning",
-      description: "We create a comprehensive project plan, including timelines, milestones, and technical specifications."
+      title: "Architecture Planning",
+      description:
+        "Designing system structure, database schema, and development roadmap.",
     },
     {
       step: "03",
-      title: "Design",
-      description: "Our designers create beautiful, user-friendly interfaces that align with your brand and user needs."
+      title: "UI & System Design",
+      description:
+        "Creating structured, user-focused interfaces aligned with system architecture.",
     },
     {
       step: "04",
       title: "Development",
-      description: "Our developers bring the designs to life using cutting-edge technologies and best coding practices."
+      description:
+        "Building clean, scalable systems using industry-standard technologies.",
     },
     {
       step: "05",
-      title: "Testing",
-      description: "Rigorous testing ensures your product is bug-free, performs well, and provides a great user experience."
+      title: "Testing & Optimization",
+      description:
+        "Performance testing, debugging, and stability improvements.",
     },
     {
       step: "06",
-      title: "Launch & Support",
-      description: "We deploy your product and provide ongoing support and maintenance to ensure continued success."
-    }
+      title: "Deployment & Support",
+      description:
+        "Production deployment with optional long-term maintenance support.",
+    },
   ];
 
   return (
     <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto text-center mb-24">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-6 animate-fadeInUp">
+      {/* Hero */}
+      <section className="max-w-6xl mx-auto text-center mb-20">
+        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
           Our <span className="gradient-text">Services</span>
         </h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fadeInUp stagger-2">
-          From concept to deployment, we offer comprehensive development services to bring your digital dreams to life
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          Structured development solutions across web, mobile, backend, and
+          interactive platforms.
         </p>
       </section>
 
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto mb-32">
+      {/* Services */}
+      <section className="max-w-6xl mx-auto mb-28">
         <div className="grid lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
-              className="card-hover glass rounded-3xl p-8 animate-fadeInUp"
-              style={{animationDelay: `${index * 0.1}s`}}
+              className="bg-white/5 border border-white/10 rounded-2xl p-8"
             >
-              {/* Service Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-4">
-                  <div className={`text-6xl bg-gradient-to-br ${service.color} p-4 rounded-2xl`}>
-                    {service.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                    <p className="text-gray-400 text-sm">{service.subtitle}</p>
-                  </div>
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">{service.icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm">{service.subtitle}</p>
                 </div>
               </div>
 
-              {/* Description */}
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 {service.description}
               </p>
 
-              {/* Features */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3 flex items-center">
-                  <span className="w-1 h-6 bg-gradient-to-b {service.color} rounded-full mr-2"></span>
-                  What We Offer
-                </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-400 text-sm flex items-start">
-                      <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="grid sm:grid-cols-2 gap-2 mb-6">
+                {service.features.map((feature, idx) => (
+                  <li
+                    key={idx}
+                    className="text-gray-400 text-sm flex items-start"
+                  >
+                    <span className="text-indigo-500 mr-2">•</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
 
-              {/* Technologies */}
-              <div>
-                <h4 className="text-white font-semibold mb-3 text-sm">Technologies:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.technologies.map((tech, idx) => (
-                    <span 
-                      key={idx}
-                      className="bg-white/5 px-3 py-1 rounded-lg text-xs text-gray-300 border border-white/10"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-2">
+                {service.technologies.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-black/40 border border-white/10 px-3 py-1 rounded-md text-xs text-gray-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="max-w-7xl mx-auto mb-24">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fadeInUp">
-            Our <span className="gradient-text">Development Process</span>
+      {/* Process */}
+      <section className="max-w-6xl mx-auto mb-24">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Development Process
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto animate-fadeInUp stagger-2">
-            A transparent, collaborative approach to building exceptional products
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            A structured and transparent approach to delivering reliable
+            systems.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {process.map((item, index) => (
-            <div 
+            <div
               key={index}
-              className="glass rounded-2xl p-8 hover-lift animate-fadeInUp"
-              style={{animationDelay: `${index * 0.1}s`}}
+              className="bg-white/5 border border-white/10 rounded-xl p-6"
             >
-              <div className="text-6xl font-black gradient-text mb-4">{item.step}</div>
-              <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{item.description}</p>
+              <div className="text-indigo-500 font-semibold text-sm mb-2">
+                {item.step}
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-3">
+                {item.title}
+              </h3>
+              <p className="text-gray-400 text-sm">{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="max-w-4xl mx-auto">
-        <div className="glass rounded-3xl p-12 text-center hover-glow animate-fadeInUp">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Let's Discuss Your <span className="gradient-text">Project</span>
-          </h2>
-          <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-            Ready to get started? Contact us for a free consultation and let's turn your ideas into reality.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:zorqent@gmail.com"
-              className="btn-primary bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-indigo-500/50"
-            >
-              Get Free Quote
-            </a>
-            <Link 
-              to="/portfolio"
-              className="btn-secondary glass px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10"
-            >
-              View Our Work
-            </Link>
-          </div>
+      {/* CTA */}
+      <section className="max-w-4xl mx-auto text-center bg-white/5 border border-white/10 rounded-2xl p-12">
+        <h2 className="text-3xl font-bold text-white mb-4">
+          Have a Project in Mind?
+        </h2>
+        <p className="text-gray-400 mb-8">
+          Let’s discuss your requirements and explore a practical solution.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:zorqent@gmail.com"
+            className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl font-medium transition"
+          >
+            Request Consultation
+          </a>
+
+          <Link
+            to="/portfolio"
+            className="bg-white/5 border border-white/10 px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition"
+          >
+            View Portfolio
+          </Link>
         </div>
       </section>
     </div>
