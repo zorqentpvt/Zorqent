@@ -74,7 +74,7 @@ export default function App() {
           />
 
           <Route
-            path="#/services"
+            path="/services"
             element={
               <>
                 <SEO
