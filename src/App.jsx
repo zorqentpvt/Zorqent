@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -74,7 +74,7 @@ export default function App() {
           />
 
           <Route
-            path="/services"
+            path="#/services"
             element={
               <>
                 <SEO
