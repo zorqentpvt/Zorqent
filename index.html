@@ -77,8 +77,19 @@
   }
   </script>
 
-  <script type="module" crossorigin src="/assets/index-BPvSYhyB.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-1ffsciBm.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+  <script type="module" crossorigin src="/assets/index-Boh3nGtG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DvYKpzke.css">
 </head>
 
 <body>
