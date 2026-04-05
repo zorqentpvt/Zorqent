@@ -1,2 +1,39 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #6366f1;
+}
+
+body {
+  @apply transition-colors duration-300 bg-white dark:bg-black text-gray-900 dark:text-white;
+}
+
+/* Custom classes for gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 font-bold;
+}
+
+.glass {
+  @apply bg-gray-50/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-md;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-2;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10;
+}
+
+/* Base page container with transition */
+.page-container {
+  @apply min-h-screen transition-colors duration-300 bg-white dark:bg-black text-gray-900 dark:text-white;
+}

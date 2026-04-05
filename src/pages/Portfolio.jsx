@@ -10,8 +10,7 @@ export default function Portfolio() {
         "Payment Integration",
         "Cloud Infrastructure"
       ],
-      gradient: "from-blue-600 to-cyan-600",
-      icon: "🛒"
+      image: "/portfolio/commerce.png"
     },
     {
       title: "Cross-Platform Mobile Experiences",
@@ -23,8 +22,7 @@ export default function Portfolio() {
         "Cloud Services",
         "Analytics Integration"
       ],
-      gradient: "from-green-600 to-teal-600",
-      icon: "📱"
+      image: "/portfolio/mobile.png"
     },
     {
       title: "Interactive Game Development",
@@ -36,8 +34,7 @@ export default function Portfolio() {
         "Performance Optimization",
         "Cross-Device Support"
       ],
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🎮"
+      image: "/portfolio/game.png"
     },
     {
       title: "Business Automation Platforms",
@@ -49,8 +46,7 @@ export default function Portfolio() {
         "Secure Architecture",
         "Workflow Automation"
       ],
-      gradient: "from-orange-600 to-red-600",
-      icon: "⚙️"
+      image: "/portfolio/automation.png"
     },
     {
       title: "Marketplace & Listing Platforms",
@@ -62,8 +58,7 @@ export default function Portfolio() {
         "SEO Optimization",
         "Scalable Databases"
       ],
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "🏠"
+      image: "/portfolio/marketplace.png"
     },
     {
       title: "Education & Engagement Platforms",
@@ -75,20 +70,19 @@ export default function Portfolio() {
         "Progress Tracking",
         "Cloud Synchronization"
       ],
-      gradient: "from-yellow-600 to-orange-600",
-      icon: "📚"
+      image: "/portfolio/education.png"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f0f14] text-white pt-32 pb-40 px-6">
+    <div className="page-container pt-32 pb-40 px-6">
 
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto text-center mb-40">
-        <h1 className="text-6xl md:text-7xl font-extrabold mb-8">
+        <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-8">
           What We <span className="gradient-text">Engineer</span>
         </h1>
-        <p className="text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
           We build scalable digital systems designed for performance,
           longevity, and measurable business impact.
         </p>
@@ -104,20 +98,25 @@ export default function Portfolio() {
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             }`}
           >
-            {/* Visual */}
-            <div
-              className={`flex-1 h-96 rounded-3xl bg-gradient-to-br ${item.gradient} flex items-center justify-center text-9xl shadow-2xl`}
-            >
-              {item.icon}
+            <div className="flex-1 group relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              <div className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 shadow-2xl">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent pointer-events-none"></div>
+              </div>
             </div>
 
             {/* Content */}
             <div className="flex-1">
-              <h2 className="text-4xl font-bold mb-6">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 {item.title}
               </h2>
 
-              <p className="text-gray-400 text-lg leading-relaxed mb-10">
+              <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-10">
                 {item.description}
               </p>
 
@@ -125,7 +124,7 @@ export default function Portfolio() {
                 {item.stack.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-5 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-gray-300"
+                    className="px-5 py-2 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-sm text-gray-700 dark:text-gray-300"
                   >
                     {tech}
                   </span>
@@ -139,10 +138,10 @@ export default function Portfolio() {
 
       {/* Philosophy Section */}
       <section className="max-w-4xl mx-auto mt-48 text-center">
-        <h2 className="text-5xl font-bold mb-8">
+        <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-8">
           Built for Scale. Designed for Longevity.
         </h2>
-        <p className="text-gray-400 text-lg leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
           Every system is engineered with clean architecture,
           performance-first principles, and future scalability in mind.
           No shortcuts. No bloated frameworks. Just structured,
@@ -152,12 +151,12 @@ export default function Portfolio() {
 
       {/* CTA Section */}
       <section className="max-w-4xl mx-auto mt-40">
-        <div className="glass rounded-3xl p-16 text-center border border-white/10">
-          <h2 className="text-4xl font-bold mb-6">
+        <div className="glass rounded-3xl p-16 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Ready to Build Something That Lasts?
           </h2>
 
-          <p className="text-gray-400 text-lg mb-12">
+          <p className="text-gray-600 dark:text-gray-400 text-lg mb-12">
             If you're serious about building a scalable product,
             let's start the conversation.
           </p>
@@ -165,14 +164,14 @@ export default function Portfolio() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="mailto:zorqent@gmail.com"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 px-10 py-5 rounded-xl text-lg font-semibold shadow-xl"
+              className="bg-indigo-600 text-white px-10 py-5 rounded-xl text-lg font-semibold shadow-xl hover:bg-indigo-500 transition"
             >
               Start a Conversation
             </a>
 
             <a
               href="tel:+917306684286"
-              className="px-10 py-5 rounded-xl text-lg font-semibold border border-white/20 hover:bg-white/5 transition"
+              className="px-10 py-5 rounded-xl text-lg font-semibold border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition"
             >
               Call Directly
             </a>

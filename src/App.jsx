@@ -55,7 +55,7 @@ function SEO({ title, description, keywords, ogImage }) {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900 text-white overflow-x-hidden">
+      <div className="page-container overflow-x-hidden">
         <Navbar />
 
         <Routes>

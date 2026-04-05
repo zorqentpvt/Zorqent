@@ -212,7 +212,7 @@ const process = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <div className="page-container pt-32 pb-24 px-4 sm:px-6 lg:px-8">
 
       {/* ── Hero ── */}
       <section className="max-w-6xl mx-auto text-center mb-20">
@@ -221,10 +221,10 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             Our <span className="gradient-text">Services</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
             Structured development solutions across web, mobile, backend, and
             interactive platforms.
           </p>
@@ -240,7 +240,7 @@ export default function Services() {
               variants={cardVariant}
               whileHover={{ y: -4, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className={`relative bg-white/5 border border-white/10 rounded-2xl p-8 overflow-hidden group cursor-default ${service.border} transition-colors duration-300`}
+              className={`relative bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl p-8 overflow-hidden group cursor-default ${service.border} transition-colors duration-300`}
             >
               {/* Gradient accent on hover */}
               <div
@@ -261,15 +261,15 @@ export default function Services() {
                     {service.icon}
                   </motion.div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 text-sm">{service.subtitle}</p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">{service.subtitle}</p>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -278,7 +278,7 @@ export default function Services() {
                   {service.features.map((feature, idx) => (
                     <motion.li
                       key={idx}
-                      className="text-gray-400 text-sm flex items-start"
+                      className="text-gray-600 dark:text-gray-400 text-sm flex items-start"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: idx * 0.04 }}
@@ -295,7 +295,7 @@ export default function Services() {
                   {service.technologies.map((tech, idx) => (
                     <motion.span
                       key={idx}
-                      className="bg-black/40 border border-white/10 px-3 py-1 rounded-md text-xs text-gray-300"
+                      className="bg-gray-200 dark:bg-black/40 border border-gray-300 dark:border-white/10 px-3 py-1 rounded-md text-xs text-gray-700 dark:text-gray-300"
                       whileHover={{ borderColor: "rgba(99,102,241,0.5)", color: "#a5b4fc" }}
                       transition={{ duration: 0.15 }}
                     >
@@ -312,10 +312,10 @@ export default function Services() {
       {/* ── Process ── */}
       <section className="max-w-6xl mx-auto mb-24">
         <FadeIn className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Development Process
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A structured and transparent approach to delivering reliable systems.
           </p>
         </FadeIn>
@@ -325,9 +325,9 @@ export default function Services() {
             <motion.div
               key={index}
               variants={cardVariant}
-              whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.07)" }}
+              whileHover={{ y: -3, backgroundColor: "rgba(99,102,241,0.05)" }}
               transition={{ type: "spring", stiffness: 280, damping: 24 }}
-              className="relative bg-white/5 border border-white/10 rounded-xl p-6 group overflow-hidden cursor-default"
+              className="relative bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl p-6 group overflow-hidden cursor-default"
             >
               {/* Connector dot */}
               <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-indigo-500/40 group-hover:bg-indigo-400 transition-colors duration-300" />
@@ -342,10 +342,10 @@ export default function Services() {
                 {item.step}
               </motion.div>
 
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {item.description}
               </p>
 
@@ -366,7 +366,7 @@ export default function Services() {
       <FadeIn direction="up">
         <section className="max-w-4xl mx-auto">
           <motion.div
-            className="text-center bg-white/5 border border-white/10 rounded-2xl p-12 relative overflow-hidden"
+            className="text-center bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl p-12 relative overflow-hidden"
             whileHover={{ borderColor: "rgba(99,102,241,0.35)" }}
             transition={{ duration: 0.3 }}
           >
@@ -375,10 +375,10 @@ export default function Services() {
             <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
 
             <div className="relative">
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Have a Project in Mind?
               </h2>
-              <p className="text-gray-400 mb-8">
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
                 Let's discuss your requirements and explore a practical solution.
               </p>
 
@@ -395,7 +395,7 @@ export default function Services() {
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Link
                     to="/portfolio"
-                    className="bg-white/5 border border-white/10 px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition block"
+                    className="bg-gray-200 dark:bg-white/5 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-medium hover:bg-gray-300 dark:hover:bg-white/10 transition block"
                   >
                     View Portfolio
                   </Link>
