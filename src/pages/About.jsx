@@ -81,13 +81,13 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <div className="page-container pt-32 pb-24 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto text-center mb-24">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-6 animate-fadeInUp">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-6 animate-fadeInUp">
           About <span className="gradient-text">Zorqent</span>
         </h1>
-        <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fadeInUp stagger-2">
+        <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fadeInUp stagger-2">
           A young, ambitious team of developers from Kerala, India, on a mission to transform businesses through innovative digital solutions
         </p>
       </section>
@@ -96,10 +96,10 @@ export default function About() {
       <section className="max-w-7xl mx-auto mb-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fadeInUp">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Our <span className="gradient-text">Story</span>
             </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
+            <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
                 Zorqent started with a simple idea: what if a group of passionate, talented developers could offer world-class development services without the enterprise price tag?
               </p>
@@ -126,8 +126,8 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Based in Kerala</h3>
-                    <p className="text-gray-400 text-sm">Operating from God's Own Country, serving the world</p>
+                    <h3 className="text-gray-900 dark:text-white font-semibold mb-2">Based in Kerala</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Operating from God's Own Country, serving the world</p>
                   </div>
                 </div>
 
@@ -138,8 +138,8 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Fresh Developers</h3>
-                    <p className="text-gray-400 text-sm">Young, energetic team with modern skills and perspectives</p>
+                    <h3 className="text-gray-900 dark:text-white font-semibold mb-2">Fresh Developers</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Young, energetic team with modern skills and perspectives</p>
                   </div>
                 </div>
 
@@ -150,8 +150,8 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Global Reach</h3>
-                    <p className="text-gray-400 text-sm">Serving clients from India to international markets</p>
+                    <h3 className="text-gray-900 dark:text-white font-semibold mb-2">Global Reach</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Serving clients from India to international markets</p>
                   </div>
                 </div>
 
@@ -162,8 +162,8 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Startup Mindset</h3>
-                    <p className="text-gray-400 text-sm">Agile, innovative, and always ready to adapt</p>
+                    <h3 className="text-gray-900 dark:text-white font-semibold mb-2">Startup Mindset</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Agile, innovative, and always ready to adapt</p>
                   </div>
                 </div>
               </div>
@@ -183,8 +183,8 @@ export default function About() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
               </svg>
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Our Vision</h3>
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Vision</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
               To become a globally recognized technology partner, known for transforming innovative ideas into successful digital products that make a real impact.
             </p>
             <p className="text-gray-300 leading-relaxed">
@@ -199,8 +199,8 @@ export default function About() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Our Mission</h3>
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
               To deliver exceptional digital solutions that combine cutting-edge technology with user-centric design, while maintaining transparent communication and startup-friendly pricing.
             </p>
             <p className="text-gray-300 leading-relaxed">
@@ -213,7 +213,7 @@ export default function About() {
       {/* Values Section */}
       <section className="max-w-7xl mx-auto mb-32">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fadeInUp">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fadeInUp">
             Our <span className="gradient-text">Core Values</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto animate-fadeInUp stagger-2">
@@ -229,8 +229,8 @@ export default function About() {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="text-5xl mb-4">{value.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{value.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{value.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>
@@ -239,7 +239,7 @@ export default function About() {
       {/* Team Section */}
       <section className="max-w-7xl mx-auto mb-32">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fadeInUp">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fadeInUp">
             Meet Our <span className="gradient-text">Team</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto animate-fadeInUp stagger-2">
@@ -255,8 +255,8 @@ export default function About() {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="text-5xl font-black gradient-text mb-4">{member.count}</div>
-              <h3 className="text-xl font-bold text-white mb-2">{member.role}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{member.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{member.role}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{member.description}</p>
             </div>
           ))}
         </div>
@@ -265,7 +265,7 @@ export default function About() {
       {/* Journey/Timeline Section */}
       <section className="max-w-5xl mx-auto mb-24">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fadeInUp">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fadeInUp">
             Our <span className="gradient-text">Journey</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto animate-fadeInUp stagger-2">
@@ -286,8 +286,8 @@ export default function About() {
                 </div>
               </div>
               <div className="glass rounded-2xl p-6 flex-1 hover-lift">
-                <h3 className="text-xl font-bold text-white mb-2">{milestone.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{milestone.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{milestone.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{milestone.description}</p>
               </div>
             </div>
           ))}
@@ -297,10 +297,10 @@ export default function About() {
       {/* CTA Section */}
       <section className="max-w-4xl mx-auto">
         <div className="glass rounded-3xl p-12 text-center hover-glow animate-fadeInUp">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Join Us on Our <span className="gradient-text">Journey</span>
           </h2>
-          <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed">
             Whether you're a startup, entrepreneur, or established business, we're ready to help you build something extraordinary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

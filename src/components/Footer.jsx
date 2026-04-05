@@ -21,14 +21,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative border-t border-white/10 bg-black/50 backdrop-blur-lg">
+    <footer className="relative border-t border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-black/50 backdrop-blur-lg">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4 animate-fadeInUp stagger-1">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center">
                 <img
                   src={logo}
                   alt="Zorqent Logo"
@@ -39,7 +39,7 @@ export default function Footer() {
                 Zorqent
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               A passionate team of young developers from Kerala, India, building
               innovative digital solutions for clients worldwide.
             </p>
@@ -48,7 +48,7 @@ export default function Footer() {
                 href="https://github.com/zorqentpvt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110"
+                className="w-9 h-9 rounded-lg bg-gray-200 dark:bg-white/5 hover:bg-gray-300 dark:hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110 text-gray-900 dark:text-white"
               >
                 <svg
                   className="w-5 h-5"
@@ -62,7 +62,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110"
+                className="w-9 h-9 rounded-lg bg-gray-200 dark:bg-white/5 hover:bg-gray-300 dark:hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110 text-gray-900 dark:text-white"
               >
                 <svg
                   className="w-5 h-5"
@@ -76,7 +76,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110"
+                className="w-9 h-9 rounded-lg bg-gray-200 dark:bg-white/5 hover:bg-gray-300 dark:hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110 text-gray-900 dark:text-white"
               >
                 <svg
                   className="w-5 h-5"
@@ -91,7 +91,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="animate-fadeInUp stagger-2">
-            <h3 className="text-lg font-semibold mb-4 text-white">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -99,7 +99,7 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-white transition-colors duration-300 text-sm flex items-center group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.label}
@@ -111,13 +111,13 @@ export default function Footer() {
 
           {/* Services */}
           <div className="animate-fadeInUp stagger-3">
-            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
                   <Link
                     to="/services"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-white transition-colors duration-300 text-sm flex items-center group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {service}
@@ -129,14 +129,14 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="animate-fadeInUp stagger-4">
-            <h3 className="text-lg font-semibold mb-4 text-white">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
               Get In Touch
             </h3>
             <ul className="space-y-4">
               <li>
                 <a
                   href="mailto:zorqent@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 text-sm flex items-start group"
+                  className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-white transition-colors duration-300 text-sm flex items-start group"
                 >
                   <svg
                     className="w-5 h-5 mr-3 mt-0.5 text-indigo-500 group-hover:scale-110 transition-transform"
@@ -154,7 +154,7 @@ export default function Footer() {
                   <span>zorqent@gmail.com</span>
                 </a>
               </li>
-              <li className="text-gray-400 text-sm flex items-start">
+              <li className="text-gray-600 dark:text-gray-400 text-sm flex items-start">
                 <svg
                   className="w-5 h-5 mr-3 mt-0.5 text-purple-500"
                   fill="none"
@@ -174,7 +174,7 @@ export default function Footer() {
                   <div className="mt-1">+91 85905 94735</div>
                 </div>
               </li>
-              <li className="text-gray-400 text-sm flex items-start">
+              <li className="text-gray-600 dark:text-gray-400 text-sm flex items-start">
                 <svg
                   className="w-5 h-5 mr-3 mt-0.5 text-green-500"
                   fill="none"
@@ -202,14 +202,14 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-gray-200 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">
+            <p className="text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
               © {currentYear} Zorqent. All rights reserved. Crafted with passion
               in Kerala 🌴
             </p>
-            <div className="flex space-x-6 text-sm text-gray-400">
+            <div className="flex space-x-6 text-sm text-gray-600 dark:text-gray-400">
               <Link
                 to="/contact"
                 className="hover:text-white transition-colors"

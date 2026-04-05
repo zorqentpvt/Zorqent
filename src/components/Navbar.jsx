@@ -1,10 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 import logo from "../assets/logo.jpg";
 
 export default function Navbar() {
+  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -41,11 +43,11 @@ export default function Navbar() {
     >
       {/* Navbar background — animated on scroll */}
       <motion.div
-        className="absolute inset-0 border-b border-white/10 backdrop-blur-md"
+        className="absolute inset-0 border-b border-gray-200 dark:border-white/10 backdrop-blur-md"
         initial={{ opacity: 0 }}
         animate={{ opacity: isScrolled ? 1 : 0 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        style={{ backgroundColor: "rgba(0,0,0,0.88)" }}
+        style={{ backgroundColor: theme === "dark" ? "rgba(0,0,0,0.88)" : "rgba(255,255,255,0.88)" }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,8 +69,8 @@ export default function Navbar() {
             </motion.div>
 
             <div className="flex flex-col leading-tight">
-              <span className="text-xl font-semibold text-white">Zorqent</span>
-              <span className="text-xs text-gray-400">Kerala, India</span>
+              <span className="text-xl font-semibold text-gray-900 dark:text-white">Zorqent</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">Kerala, India</span>
             </div>
           </Link>
 
@@ -81,13 +83,13 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="relative px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-300 hover:text-white"
+                  className="relative px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white"
                 >
                   {/* Active / hover pill */}
                   {isActive && (
                     <motion.span
                       layoutId="nav-active-pill"
-                      className="absolute inset-0 bg-white/10 rounded-md"
+                      className="absolute inset-0 bg-indigo-50 dark:bg-white/10 rounded-md"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -97,11 +99,29 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* ── Desktop CTA ── */}
-          <div className="hidden md:block">
+          {/* ── Desktop CTA & Theme Toggle ── */}
+          <div className="hidden md:flex items-center space-x-4">
+            <motion.button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-300 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.242 16.242l.707.707M7.758 7.758l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </motion.button>
+
             <motion.a
               href="mailto:zorqent@gmail.com"
-              className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium block"
+              className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium block shadow-lg shadow-indigo-500/20"
               whileHover={{ scale: 1.05, backgroundColor: "#6366f1" }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 340, damping: 22 }}
@@ -111,41 +131,60 @@ export default function Navbar() {
           </div>
 
           {/* ── Mobile Toggle ── */}
-          <motion.button
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 transition"
-            aria-label="Toggle menu"
-            whileTap={{ scale: 0.9 }}
-          >
-            <div className="w-5 h-4 relative flex flex-col justify-between">
-              <motion.span
-                className="absolute h-0.5 w-full bg-white rounded origin-center"
-                animate={
-                  isMobileMenuOpen
-                    ? { rotate: 45, top: "50%", translateY: "-50%" }
-                    : { rotate: 0, top: "0%", translateY: "0%" }
-                }
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                style={{ top: 0 }}
-              />
-              <motion.span
-                className="absolute h-0.5 w-full bg-white rounded"
-                animate={isMobileMenuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-                transition={{ duration: 0.2 }}
-                style={{ top: "50%", translateY: "-50%" }}
-              />
-              <motion.span
-                className="absolute h-0.5 w-full bg-white rounded origin-center"
-                animate={
-                  isMobileMenuOpen
-                    ? { rotate: -45, bottom: "50%", translateY: "50%" }
-                    : { rotate: 0, bottom: "0%", translateY: "0%" }
-                }
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                style={{ bottom: 0 }}
-              />
-            </div>
-          </motion.button>
+          <div className="md:hidden flex items-center space-x-2">
+            <motion.button
+              onClick={toggleTheme}
+              className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-300 transition"
+              whileTap={{ scale: 0.9 }}
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.242 16.242l.707.707M7.758 7.758l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </motion.button>
+
+            <motion.button
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-900 dark:text-white transition"
+              aria-label="Toggle menu"
+              whileTap={{ scale: 0.9 }}
+            >
+              <div className="w-5 h-4 relative flex flex-col justify-between">
+                <motion.span
+                  className="absolute h-0.5 w-full bg-current rounded origin-center"
+                  animate={
+                    isMobileMenuOpen
+                      ? { rotate: 45, top: "50%", translateY: "-50%" }
+                      : { rotate: 0, top: "0%", translateY: "0%" }
+                  }
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ top: 0 }}
+                />
+                <motion.span
+                  className="absolute h-0.5 w-full bg-current rounded"
+                  animate={isMobileMenuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                  transition={{ duration: 0.2 }}
+                  style={{ top: "50%", translateY: "-50%" }}
+                />
+                <motion.span
+                  className="absolute h-0.5 w-full bg-current rounded origin-center"
+                  animate={
+                    isMobileMenuOpen
+                      ? { rotate: -45, bottom: "50%", translateY: "50%" }
+                      : { rotate: 0, bottom: "0%", translateY: "0%" }
+                  }
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ bottom: 0 }}
+                />
+              </div>
+            </motion.button>
+          </div>
         </div>
       </div>
 
@@ -161,7 +200,7 @@ export default function Navbar() {
             className="md:hidden overflow-hidden"
           >
             <motion.div
-              className="px-4 pt-2 pb-6 space-y-1 bg-black/95 backdrop-blur-md border-t border-white/10"
+              className="px-4 pt-2 pb-6 space-y-1 bg-white/95 dark:bg-black/95 backdrop-blur-md border-t border-gray-100 dark:border-white/10"
               initial="hidden"
               animate="visible"
               exit="hidden"
@@ -186,7 +225,7 @@ export default function Navbar() {
                       className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
                         isActive
                           ? "text-white bg-indigo-600"
-                          : "text-gray-300 hover:text-white hover:bg-white/5"
+                          : "text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5"
                       }`}
                     >
                       {link.label}
